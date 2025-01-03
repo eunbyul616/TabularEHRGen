@@ -310,3 +310,10 @@ pyrightconfig.json
 /results/csv/*
 /results/plots/*
 data/preprocessed/*
+
+!/log/hydra/.gitkeep
+!/results/checkpoints/.gitkeep
+!/results/manipulation/.gitkeep
+!/results/csv/.gitkeep
+!/results/plots/.gitkeep
+!/data/preprocessed/.gitkeep
