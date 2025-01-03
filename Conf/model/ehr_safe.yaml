@@ -1,0 +1,56 @@
+static_categorical_autoencoder:
+  encoder:
+    input_dim: 26
+    compress_dims: [16, 8]
+    embedding_dim: 4
+    activation: 'relu'
+
+  decoder:
+    embedding_dim: 4
+    decompress_dims: [8, 16]
+    output_dims: [8, 8, 16]
+    activation: 'relu'
+
+temporal_categorical_autoencoder:
+  encoder:
+    input_dim: 32
+    compress_dims: [512, 128]
+    embedding_dim: 64
+    activation: 'relu'
+    seq_len: 30
+
+  decoder:
+    embedding_dim: 64
+    decompress_dims: [128, 512]
+    output_dims: [8, 8, 16]
+    activation: 'relu'
+    seq_len: 30
+
+joint_autoencoder:
+  encoder:
+    input_dim: 5061
+    compress_dims: [2048, 1024]
+    embedding_dim: 512
+    activation: 'leaky_relu'
+
+  decoder:
+    embedding_dim: 512
+    decompress_dims: [1024, 2048]
+    output_dim: 5061
+    activation: 'relu'
+
+gan:
+  generator:
+    input_dim: 256
+    hidden_dims: [128, 128, 128]
+    output_dim: 512
+    activation: 'relu'
+  discriminator:
+    input_dim: 512
+    hidden_dims: [256, 128]
+    output_dim: 1
+    activation: 'leaky_relu'
+
+
+
+

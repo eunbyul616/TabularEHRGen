@@ -1,0 +1,15 @@
+model_name: 'StaticCategoricalAE'
+loss:
+  name: 'category'
+
+optimizer:
+  name: 'adam'
+  lr: 0.0001
+
+general:
+  seed: 42
+  compile_model: False
+
+  num_epochs: 150
+  eval_freq: 50
+  keys: ['Total_Loss']

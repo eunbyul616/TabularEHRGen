@@ -1,0 +1,18 @@
+defaults:
+  - model@model: ehr_safe
+  - train: gan
+  - log: common
+  - data@dataset: common
+  - data@dataloader: loader
+  - data@data: inspire
+  - data@manipulation: manipulation
+  - common@path: path
+
+hydra:
+  run:
+    #    dir: /Absolute/Path/for/Project/log/hydra/${now:%Y-%m-%d}/${now:%H-%M}  # Change needed in front of the "/log"
+    dir: /path/to/your/project/log/hydra/${now:%Y-%m-%d}/${now:%H-%M}
+
+device_num: 0
+seed: 42
+sample_size: 1000

@@ -1,0 +1,24 @@
+model_name: 'JointAE'
+loss:
+  name: 'category'
+
+optimizer:
+  name: 'adam'
+  lr: 0.0001
+
+
+general:
+  seed: 42
+  compile_model: False
+
+  num_epochs: 1500
+  eval_freq: 500
+  keys: ['Total_Loss', 'BCE_Loss', 'MSE_Loss', 'Static_Loss', 'Temporal_Loss', 'Mask_Loss', 'Time_Loss']
+
+static_categorical_ae:
+  name: 'StaticCategoricalAE'
+  checkpoint: '2025-01-03\14-08'
+
+temporal_categorical_ae:
+  name: 'TemporalCategoricalAE'
+  checkpoint: '2025-01-03\14-15'

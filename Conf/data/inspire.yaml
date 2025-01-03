@@ -1,0 +1,6 @@
+key_cols: ['subject_id', 'op_id']
+time_cols: ['chart_time']
+
+excluded_cols:
+  static: ['los', 'icu_los', 'allcause_mortality']
+  temporal: []

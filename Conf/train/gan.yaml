@@ -1,0 +1,42 @@
+model_name: 'GAN'
+
+loss:
+  name: 'wgan_discriminator'
+gen_loss:
+  name: 'wgan_generator'
+
+optimizer:
+  name: 'adamw'
+  lr: 1e-4
+  beta1: 0.5
+  beta2: 0.9
+  weight_decay: 1e-5
+
+gen_optimizer:
+  name: 'adamw'
+  lr: 1e-4
+  beta1: 0.5
+  beta2: 0.9
+  weight_decay: 1e-5
+
+discriminator_steps: 5
+
+general:
+  seed: 42
+  compile_model: False
+
+  num_epochs: 300
+  eval_freq: 150
+  keys: ['Total_Loss', 'Disc_Loss', 'Gen_Loss']
+
+static_categorical_ae:
+  name: 'StaticCategoricalAE'
+  checkpoint: '2025-01-03\14-08'
+
+temporal_categorical_ae:
+  name: 'TemporalCategoricalAE'
+  checkpoint: '2025-01-03\14-15'
+
+joint_ae:
+  name: 'JointAE'
+  checkpoint: '2025-01-03/14-55'
